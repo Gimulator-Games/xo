@@ -1,0 +1,72 @@
+roles:
+  - role: "agent"
+    rules:
+      - type: "register"
+        name: ""
+        namespace: ""
+        methods:
+          - "set"
+      - type: "action"
+        name: ""
+        namespace: ""
+        methods:
+          - "set"
+          - "delete"
+      - type: "world"
+        name: ""
+        namespace: ""
+        methods:
+          - "get"
+          - "find"
+          - "watch"
+  - role: "judge"
+    rules:
+      - type: "register"
+        name: ""
+        namespace: ""
+        methods:
+          - "set"
+          - "get"
+          - "find"
+          - "watch"
+          - "delete"
+      - type: "action"
+        name: ""
+        namespace: ""
+        methods:
+          - "get"
+          - "watch"
+      - type: "world"
+        name: ""
+        namespace: ""
+        methods:
+          - "get"
+          - "set"
+          - "find"
+          - "watch"
+          - "delete"
+      - type: "end_of_game"
+        name: ""
+        namespace: ""
+        methods:
+          - "set"
+  - role: "logger"
+    rules:
+      - type: ""
+        name: ""
+        namespace: ""
+        methods:
+          - "get"
+          - "set"
+          - "find"
+          - "watch"
+          - "delete"
+actors:
+  - id: "agent1"
+    role: "agent"
+  - id: "agent2"
+    role: "agent"
+  - id: "judge"
+    role: "judge"
+  - id: "logger"
+    role: "logger"
